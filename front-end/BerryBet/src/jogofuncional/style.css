@@ -1,0 +1,214 @@
+/* Regras universais CONSOLIDADAS */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  box-sizing: border-box;
+}
+
+/* Estados universais CONSOLIDADOS */
+*:focus,
+*:active,
+*:focus-visible,
+*:focus-within,
+button,
+input,
+a,
+button:focus,
+button:active,
+button:hover,
+button:focus-visible,
+button:focus-within,
+input:focus,
+input:active,
+input:focus-visible,
+a:focus,
+a:active,
+a:focus-visible {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Remove contornos específicos do WebKit e Firefox */
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0 !important;
+  outline: none !important;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: none !important;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: #000000;
+  height: 8vh;
+  margin-bottom: 25px;
+}
+
+
+.navlist li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+body {
+  background-color: #111;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 0px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.slot {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 600px;
+  height: 480px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+.dog-img {
+  width: 60%;
+  height: 80%;
+  object-fit: contain;
+  transition: none;
+  filter: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none !important;
+  border: none !important;
+}
+
+button:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.result {
+  margin-top: 25px;
+  font-size: 20px;
+}
+.react-horizontal-scrolling-menu--scroll-container {
+  overflow-x: hidden !important;
+}
+
+/* Animação de rotação para o caramelo error */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning-caramelo {
+  animation: spin 2s linear infinite;
+}
+
+/* Classes para lightbars estáticas */
+.lightbar-card {
+  box-shadow: 0 0 20px rgba(81, 248, 147, 0.5) !important;
+  border: 2px solid #51F893 !important;
+}
+
+.lightbar-play-button {
+  box-shadow: 0 0 15px rgba(81, 248, 147, 0.6) !important;
+}
+
+/* Remove todos os contornos e animações indesejadas */
+button, input[type="button"], input[type="submit"] {
+  outline: none !important;
+  border: none !important;
+}
+
+/* Regras específicas para o jogo do tigrinho - TODAS as interações */
+.jogo-tigrinho *:not(.lightbar-card):not(.lightbar-play-button):not(.spinning-caramelo),
+.jogo-tigrinho button:not(.lightbar-play-button),
+.jogo-tigrinho input,
+.jogo-tigrinho *:focus:not(.lightbar-card):not(.lightbar-play-button),
+.jogo-tigrinho *:active:not(.lightbar-card):not(.lightbar-play-button),
+.jogo-tigrinho button:focus:not(.lightbar-play-button),
+.jogo-tigrinho button:active:not(.lightbar-play-button),
+.jogo-tigrinho button:hover:not(.lightbar-play-button),
+.jogo-tigrinho button:focus-visible:not(.lightbar-play-button),
+.jogo-tigrinho button:focus-within:not(.lightbar-play-button),
+.jogo-tigrinho input:focus,
+.jogo-tigrinho input:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Previne qualquer movimento ou animação indesejada - EXCETO lightbars */
+.jogo-tigrinho *:not(.lightbar-card):not(.lightbar-play-button):not(.spinning-caramelo),
+.jogo-tigrinho *:active:not(.lightbar-card):not(.lightbar-play-button):not(.spinning-caramelo),
+.jogo-tigrinho button:active:not(.lightbar-play-button),
+.jogo-tigrinho input:active,
+.jogo-tigrinho div:active:not(.lightbar-card) {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Exceções para animações permitidas */
+.jogo-tigrinho .spinning-caramelo {
+  animation: spin 2s linear infinite !important;
+}
+
+.jogo-tigrinho .lightbar-card {
+  box-shadow: 0 0 20px rgba(81, 248, 147, 0.5) !important;
+  border: 2px solid #51F893 !important;
+}
+
+.jogo-tigrinho .lightbar-play-button {
+  box-shadow: 0 0 15px rgba(81, 248, 147, 0.6) !important;
+}
