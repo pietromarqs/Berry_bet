@@ -1,6 +1,6 @@
 # Berry Bet
 
-Berry Bet é uma aplicação backend para gerenciamento de apostas, jogos, usuários e estatísticas, construída em Go utilizando o framework Gin e SQLite.
+Berry Bet é uma aplicação backend para gerenciamento de apostas, jogos, usuários e estatísticas, construída em Go utilizando o framework Gin e SQLite. Esse repositório é somente a cópia do Projeto original que está no seguinte link: https://github.com/Miguel-casarin/berry_bet
 
 ## Estrutura de Pastas e Arquivos
 
